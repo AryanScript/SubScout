@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SubScout Receipts</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px;">
+  <div style="max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <h1 style="color: #333;">SubScout: Recent Receipts</h1>
+    <hr>
+    <ul style="list-style-type: none; padding: 0;">
+      {% for email in emails %}
+      <li style="margin-bottom: 15px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #fafafa;">
+        <strong style="font-size: 1.1em; color: #222;">{{ email.subject }}</strong><br>
+        <span style="color: #666; font-size: 0.9em;">From: {{ email.sender }}</span><br>
+        <span style="color: #28a745; font-weight: bold; font-size: 1.1em;">Price: {{ email.price }}</span><br>
+        <p style="color: #555; font-size: 0.9em; margin-top: 8px;">{{ email.snippet }}</p>
+      </li>
+      {% else %}
+      <li>No receipts found!</li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>
