@@ -1,0 +1,87 @@
+/* Import new modern font 'Poppins' */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+/* Core Background: Symbolic Data Grid with SubScout Radar Glow */
+body {
+    background-color: #18181b;
+    background-image: 
+        /* The "Radar/Scout" glowing effect */
+        radial-gradient(circle at 0% 0%, rgba(16, 185, 129, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 100% 100%, rgba(255, 255, 255, 0.05) 0%, transparent 40%),
+        /* The "Data/Ledger" subtle grid pattern */
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+    padding-top: 40px;
+    margin: 0;
+}
+
+/* Main Dashboard Title */
+.dashboard-title {
+    color: #ffffff;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Individual Receipt Cards */
+.receipt-card {
+    background: #27272a;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #3f3f46;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    /* Frosted glass effect to let the grid slightly peek through */
+    background-color: rgba(39, 39, 42, 0.95);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+/* Smooth Hover Animation */
+.receipt-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    border-color: #10b981;
+}
+
+/* Receipt Text Styling */
+.receipt-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.receipt-sender {
+    color: #a1a1aa;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.receipt-snippet {
+    color: #d4d4d8;
+    font-size: 0.9rem;
+    margin-top: 12px;
+    line-height: 1.6;
+    border-top: 1px dashed #52525b;
+    padding-top: 12px;
+}
+
+/* Glowing Price Tag */
+.price-tag {
+    background: #10b981;
+    color: #042f2e;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
